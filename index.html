@@ -27,17 +27,18 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-if(typeof tokky !== 'undefined'){
-	tokky = "NotExistYet"
-}
+
 ga('create', 'UA-88347450-1', 'auto');
 ga('send', 'pageview');
-ga('send', 'event', {
+
+if(typeof tokky !== 'undefined'){
+	ga('send', 'event', {
     eventCategory: 'tokens',
     eventAction: 'gotit',
     eventLabel: tokky,
     transport: 'beacon'
   });
+}
+
 </script>
 <!-- End Google Analytics -->
-</body>
